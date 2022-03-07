@@ -22,6 +22,10 @@ r = redis.Redis(host='localhost', port=6379)
 redis_graph = Graph('paradise_papers', r)
 
 
+'''
+Get data based on the relation specified in the relation query parameter.
+'''
+
 @app.get('/getData/{relation}')
 async def getData(request:Request,relation:str):
     # query = "MATCH (i)-[s:legal_representative]->(c) RETURN i.node_id,i.name,c.node_id,c.name"
@@ -37,6 +41,12 @@ async def getData(request:Request,relation:str):
     ret_data['nodes'] =nodes
     ret_data['links'] =links 
     return(JSONResponse(ret_data))
+
+'''
+Get related nodes including the links between them and add the nodes to node_ids list
+Create a Node in the redisgraph for each node mentioned in the node_ids list.
+Create relationship between nodes based on the data in the related_nodes map.
+'''
 
 @app.get('/loadData/')
 async def loadData():
