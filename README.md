@@ -75,3 +75,11 @@ Solution Description:
 
 	c) The backend will then return data in the form of {"nodes":[],"links":[]} , that contains the nodes and their links reference the nodes as "source" and "target"
 	d) The UI uses react-force-graph of the type 2d text node to render the data returned via the backend 
+
+
+Backlog:
+Following are the gaps I see and how this solution can be improved.
+1) We can use more production ready datastore for storing graph data like neo4j
+2) Data mutations can be handled on the frontend via state management, so any realtime data updates to the graph dataset can be quickly rendered on the frontend.
+3) Full capabilitied of fastapi can be acheived by using the asynchronous functionality to load and getData.
+
