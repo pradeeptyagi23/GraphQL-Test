@@ -1,0 +1,28 @@
+apt-get -qq update -y
+apt-get -qq install -y ca-certificates
+apt-get -qq install -y curl wget unzip
+/usr/bin/python3 -m pip install --disable-pip-version-check wheel virtualenv
+/usr/bin/python3 -m pip install --disable-pip-version-check setuptools --upgrade
+/build/deps/readies/bin/enable-utf8
+apt-get -qq install -y git automake libtool autoconf
+apt-get -qq install -y locales
+apt-get -qq update -y
+apt-get -qq install -y build-essential
+apt-get -qq install -y peg
+apt-get -qq install -y valgrind
+apt-get -qq install -y astyle
+apt-get -qq update -y
+apt-get -qq install -y ca-certificates
+apt-get -qq install -y curl wget unzip
+wget -q -O /tmp/cmake.sh https://github.com/Kitware/CMake/releases/download/v3.21.1/cmake-3.21.1-`uname`-`uname -m`.sh; sh /tmp/cmake.sh --skip-license --prefix=/usr/local; rm -f /tmp/cmake.sh
+/usr/bin/python3 -m pip install --disable-pip-version-check psutil
+apt-get remove -y python3-psutil
+apt-get -qq update -y
+apt-get -qq install -y build-essential
+apt-get -qq install -y python3-dev
+/usr/bin/python3 -m pip install --disable-pip-version-check psutil
+apt-get -qq install -y git
+/usr/bin/python3 -m pip install --disable-pip-version-check --no-cache-dir --ignore-installed git+https://github.com/redisfab/redis-py.git@3.5
+/usr/bin/python3 -m pip install --disable-pip-version-check --no-cache-dir --ignore-installed redis-py-cluster
+/usr/bin/python3 -m pip install --disable-pip-version-check --no-cache-dir --ignore-installed git+https://github.com/RedisLabsModules/RLTest.git@master
+/usr/bin/python3 -m pip install --disable-pip-version-check --no-cache-dir --ignore-installed git+https://github.com/RedisLabs/RAMP@master
