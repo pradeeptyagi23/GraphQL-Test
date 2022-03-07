@@ -11,9 +11,9 @@ Deployment Steps
 Execute command : git clone https://github.com/pradeeptyagi23/GraphQL-Test.git
 
 2) Get the dataset from the url
-	chmod +x get_data.sh
-	./get_data.sh
-	This will get the the zip file from the url and extract it in the folder named dataset/ under the backend/ folder
+chmod +x get_data.sh
+./get_data.sh
+This will get the the zip file from the url and extract it in the folder named dataset/ under the backend/ folder
 
 3) Run redisgraph docker container
 Execute command  "docker run -d -p 6379:6379 -it --rm redislabs/redisgraph"
