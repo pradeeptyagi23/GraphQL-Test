@@ -8,7 +8,7 @@ Prerequisites to be installed on the system before deploying the app:
 
 Deployment Steps
 1) Get the code from git
-	git clone https://github.com/pradeeptyagi23/GraphQL-Test.git
+Execute command : git clone https://github.com/pradeeptyagi23/GraphQL-Test.git
 
 2) Get the dataset from the url
 	chmod +x get_data.sh
